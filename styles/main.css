@@ -244,6 +244,14 @@ header .theme-toggle:hover {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.nav-logo:hover {
+    transform: scale(1.1);
 }
 
 .logo-text {
