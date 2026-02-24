@@ -1,49 +1,24 @@
 // =============================================
-// THEME TOGGLE FUNCTIONALITY
-// =============================================
-
-const themeToggle = document.getElementById('theme-toggle');
-const htmlElement = document.documentElement;
-const themeIcon = document.querySelector('.theme-icon');
-
-// Check for saved theme preference or default to light mode
-const currentTheme = localStorage.getItem('theme') || 'light';
-if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeIcon.textContent = '☀️';
-}
-
-// Theme toggle event listener
-themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-
-    // Update icon
-    const isDarkMode = document.body.classList.contains('dark-mode');
-    themeIcon.textContent = isDarkMode ? '☀️' : '🌙';
-
-    // Save preference
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-});
-
-// =============================================
 // MOBILE MENU TOGGLE
 // =============================================
 
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('mobile-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-// Close menu when link is clicked
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
     });
-});
+
+    // Close menu when link is clicked
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+}
 
 // =============================================
 // SMOOTH SCROLLING & ACTIVE NAV HIGHLIGHT
@@ -57,7 +32,6 @@ window.addEventListener('scroll', () => {
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         if (pageYOffset >= sectionTop - 200) {
             current = section.getAttribute('id');
         }
@@ -86,22 +60,21 @@ function renderProjects() {
     projectsContainer.innerHTML = projects.map(project => `
         <div class="project-card">
             <div class="project-header">
-                <div style="color: var(--primary-color); margin-bottom: 1rem; display: flex; align-items: center;">${project.image}</div>
-                <h3 class="project-title">${project.name}</h3>
-                <p class="project-description">${project.description}</p>
+                <div class="project-icon">${project.image || ''}</div>
+                <span class="project-status">${project.status || 'Completed'}</span>
             </div>
-            <div class="project-body">
-                <div class="project-tech">
-                    ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-                </div>
-                <div class="project-links">
-                    <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
-                        GitHub
-                    </a>
-                    ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
-                        Live Demo
-                    </a>` : ''}
-                </div>
+            <h3 class="project-title">${project.name}</h3>
+            ${project.description ? `<p class="project-value-prop">${project.description}</p>` : ''}
+            ${project.valueProp ? `<p class="project-value-prop">${project.valueProp}</p>` : ''}
+            ${project.bullets ? `<ul class="project-bullets">
+                ${project.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
+            </ul>` : ''}
+            <div class="project-tech">
+                ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+            </div>
+            <div class="project-links">
+                <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link">Source Code →</a>
+                ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo →</a>` : ''}
             </div>
         </div>
     `).join('');
@@ -122,24 +95,66 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
             entry.target.classList.add('active');
-            // Optional: stop observing once revealed
-            // observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-document.querySelectorAll('.reveal').forEach(element => {
+document.querySelectorAll('[data-animate], .reveal').forEach(element => {
     observer.observe(element);
 });
 
 // =============================================
-// SMOOTH PAGE LOAD
+// TERMINAL TYPEWRITER EFFECT
 // =============================================
 
-window.addEventListener('load', () => {
-    document.body.style.opacity = '1';
-});
+const terminalText = [
+    "Initializing keval.dev...",
+    "Loading dependencies...",
+    "Mounting React components...",
+    "Training ML models... [OK]",
+    "System ready. Welcome!"
+];
+
+const terminalOutput = document.getElementById('terminal-output');
+let lineIndex = 0;
+let charIndex = 0;
+
+function typeWriter() {
+    if (!terminalOutput) return;
+
+    if (lineIndex < terminalText.length) {
+        if (charIndex === 0) {
+            terminalOutput.innerHTML += '<div><span class="prompt">$</span> <span class="typing-line"></span></div>';
+        }
+
+        const currentLine = document.querySelectorAll('.typing-line')[lineIndex];
+
+        if (charIndex < terminalText[lineIndex].length) {
+            currentLine.textContent += terminalText[lineIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typeWriter, Math.random() * 50 + 30);
+        } else {
+            lineIndex++;
+            charIndex = 0;
+            setTimeout(typeWriter, 500);
+        }
+    } else {
+        terminalOutput.innerHTML += '<div><span class="prompt">$</span> <span class="terminal-cursor">_</span></div>';
+    }
+}
+
+const heroSection = document.getElementById('home');
+if (heroSection && terminalOutput) {
+    const heroObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !terminalOutput.hasAttribute('data-typed')) {
+            terminalOutput.setAttribute('data-typed', 'true');
+            setTimeout(typeWriter, 500);
+        }
+    }, { threshold: 0.5 });
+    heroObserver.observe(heroSection);
+}
 
 // =============================================
 // SCROLL TO TOP BUTTON

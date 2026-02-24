@@ -4,293 +4,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Primary Meta Tags -->
-    <title>Keval Jamnapara - Software Developer | Python & ML</title>
-    <meta name="title" content="Keval Jamnapara - Software Developer | Python & ML">
     <meta name="description"
-        content="Keval Jamnapara - Frontend Developer & Python ML Enthusiast. Portfolio showcasing projects in web development, machine learning, and AI.">
-    <meta name="author" content="Keval Jamnapara">
+        content="Keval Jamnapara — Full-Stack Developer & ML Engineer. CS student at LJ Institute building AI-powered apps with Python, JavaScript, and React. Open to internships and freelance.">
     <meta name="keywords"
-        content="Keval Jamnapara, Software Developer, Python Developer, Machine Learning, Frontend Developer, Web Apps">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://keval1306.github.io/">
-    <meta property="og:title" content="Keval Jamnapara - Developer Portfolio">
+        content="Keval Jamnapara, developer portfolio, Python developer, machine learning, full stack developer, Ahmedabad, React developer, AI developer, internship">
+    <meta name="author" content="Keval Jamnapara">
+    <meta property="og:title" content="Keval Jamnapara — Developer Portfolio">
     <meta property="og:description"
-        content="Portfolio showcasing projects in web development, machine learning, and AI.">
-    <meta property="og:image" content="https://keval1306.github.io/assets/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://keval1306.github.io/">
-    <meta property="twitter:title" content="Keval Jamnapara - Developer Portfolio">
-    <meta property="twitter:description"
-        content="Portfolio showcasing projects in web development, machine learning, and AI.">
-    <meta property="twitter:image" content="https://keval1306.github.io/assets/og-image.jpg">
-
+        content="Full-Stack Developer & ML Engineer. Building AI-powered web apps with Python, JavaScript, and React.">
+    <meta property="og:image" content="assets/og-preview.png">
+    <meta property="og:url" content="https://keval1306.github.io/Portfolio/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Keval Jamnapara — Developer Portfolio">
+    <meta name="twitter:description" content="Full-Stack Developer & ML Engineer building AI-powered web apps.">
+    <title>Keval Jamnapara — Full-Stack & ML Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
     <!-- Navigation -->
+    <!-- Navigation -->
     <header>
         <nav class="navbar">
             <div class="nav-container">
                 <a href="#home" class="nav-logo">
-                    <span class="logo-text">KJ</span>
+                    keval.dev
                 </a>
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                    <li class="nav-item"><a href="#internships" class="nav-link">Internships</a></li>
-                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                </ul> <button id="theme-toggle" class="theme-toggle" title="Toggle dark mode">
-                    <span class="theme-icon">🌙</span>
+                <ul class="nav-menu" id="mobile-menu">
+                    <li class="nav-item"><a href="#about" class="nav-link mobile-nav-link">about</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link mobile-nav-link">skills</a></li>
+                    <li class="nav-item"><a href="#internships" class="nav-link mobile-nav-link">work</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link mobile-nav-link">projects</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link mobile-nav-link">contact</a></li>
+                </ul>
+                <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </div>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section id="home" class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Keval Jamnapara</h1>
-                <p class="hero-subtitle">Software Developer • Python • Machine Learning • Web Apps</p>
-                <p class="hero-tagline">Building intelligent systems and clean web applications</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="assets/Keval_Jamnapara_Resume.pdf" target="_blank" class="btn btn-secondary"
-                        style="display: flex; align-items: center; justify-content: center; gap: 8px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                            <polyline points="7 10 12 15 17 10" />
-                            <line x1="12" y1="15" x2="12" y2="3" />
-                        </svg>
-                        Download Resume
-                    </a>
+            <div class="hero-grid container">
+                <div class="hero-content">
+                    <div class="status-badge" data-animate>
+                        <span class="pulse-dot"></span>
+                        Available for internships · Summer 2026
+                    </div>
+
+                    <h1 class="hero-title" data-animate>
+                        <span class="title-line">Keval</span>
+                        <span class="title-line">Jamnapara.</span>
+                    </h1>
+
+                    <p class="hero-subtitle" data-animate>
+                        I build AI-powered web apps that actually work —
+                        from a Gemini LLM chatbot to a disease prediction
+                        ML model. CS student, 8.22 CGPA, shipped 5+ real projects.
+                    </p>
+
+                    <div class="hero-buttons" data-animate>
+                        <a href="#projects" class="btn btn-primary">→ View Projects</a>
+                        <a href="assets/Keval_Jamnapara_Resume.pdf" target="_blank" class="btn btn-ghost"
+                            style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                            Download Resume
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-decoration">
-                <div class="gradient-blob blob-1"></div>
-                <div class="gradient-blob blob-2"></div>
+
+                <div class="hero-terminal" data-animate>
+                    <div class="terminal-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="terminal-title">keval@portfolio ~</span>
+                    </div>
+                    <div class="terminal-body" id="terminal-output"></div>
+                </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="about reveal">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-                            <strong>✨ Full-Stack Developer | Python & JavaScript Specialist</strong><br>
-                            I develop intelligent systems and scalable web applications that solve real-world problems.
-                            Experienced in building responsive UIs, integrating AI/ML models, and creating data-driven
-                            solutions.
-                        </p>
-                        <p>
-                            <strong>🛠️ What I've Built:</strong><br>
-                            • Developed multiple Python-based applications (banking systems, disease prediction ML
-                            models, AI chatbots)<br>
-                            • Created responsive web applications with modern JavaScript and CSS<br>
-                            • Integrated third-party APIs (Google Gemini, WeatherAPI) into functional products
-                        </p>
-                        <p>
-                            <strong>🎯 Focused On:</strong><br>
-                            Full-stack development combining frontend excellence with backend intelligence. Passionate
-                            about AI-driven solutions and creating intuitive user experiences. Currently pursuing B.Tech
-                            in Computer Science while building real-world projects.
-                        </p>
+        <section id="about" class="about" data-animate>
+            <div class="container about-grid">
+                <div class="about-content-left">
+                    <h2 class="section-title">About</h2>
+                    <p class="about-text">
+                        <strong>✨ Full-Stack Developer | Python & JavaScript Specialist</strong><br>
+                        I develop intelligent systems and scalable web applications that solve real-world problems.
+                        Experienced in building responsive UIs, integrating AI/ML models, and creating data-driven
+                        solutions.
+                    </p>
+                    <p class="about-text">
+                        <strong>🛠️ What I've Built:</strong><br>
+                        • Developed multiple Python-based applications (banking systems, disease prediction ML models,
+                        AI chatbots)<br>
+                        • Created responsive web applications with modern JavaScript and CSS<br>
+                        • Integrated third-party APIs (Google Gemini, WeatherAPI) into functional products
+                    </p>
+                    <p class="about-text">
+                        <strong>🎯 Focused On:</strong><br>
+                        Full-stack development combining frontend excellence with backend intelligence. Passionate about
+                        AI-driven solutions and creating intuitive user experiences. Currently pursuing B.Tech in
+                        Computer Science while building real-world projects.
+                    </p>
+
+                    <div class="stats-strip">
+                        <div class="stat-card">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Projects Shipped</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Internships</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">8.22</span>
+                            <span class="stat-label">CGPA</span>
+                        </div>
                     </div>
-                    <div class="about-highlights">
-                        <div class="highlight-card">
-                            <h3>🎯 Focus</h3>
-                            <p>Full-stack development with Python & JavaScript</p>
+                </div>
+
+                <div class="about-sidebar">
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">Education</h3>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>B.Tech CSE</h4>
+                                <span class="timeline-date">2025–Present</span>
+                                <p>L.J. Institute of Engg. & Tech.<br>Ahmedabad</p>
+                            </div>
                         </div>
-                        <div class="highlight-card">
-                            <h3>🚀 Passion</h3>
-                            <p>Building AI-powered web applications</p>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Diploma, Computer Engineering</h4>
+                                <span class="timeline-date">2022–2025</span>
+                                <p>R.C. Technical Institute. <br>Ahmedabad<br>CGPA: 8.22 ★</p>
+                            </div>
                         </div>
-                        <div class="highlight-card">
-                            <h3>💡 Interest</h3>
-                            <p>Machine Learning & Data Science</p>
-                        </div>
-                        <div class="highlight-card">
-                            <h3>📚 Currently Learning</h3>
-                            <p>Fullstack Web Development</p>
-                        </div>
+                    </div>
+
+                    <div class="sidebar-block">
+                        <h3 class="sidebar-title">Certifications</h3>
+                        <ul class="cert-list">
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Tata Cybersecurity Analyst (Forage)</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Python — Mastering the Essentials</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Java — Mastering the Fundamentals</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Intro to HTML, CSS &amp; JavaScript</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg> Python Internship Certificate</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="skills reveal">
-            <div class="container">
+        <section id="skills" class="skills" data-animate>
+            <div class="container wrapper-box">
                 <h2 class="section-title">Skills & Technologies</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Languages</h3>
-                        <div class="skill-chips">
-                            <span class="skill-chip">Python</span>
-                            <span class="skill-chip">JavaScript</span>
-                            <span class="skill-chip">HTML5</span>
-                            <span class="skill-chip">CSS3</span>
-                        </div>
+
+                <div class="skills-table">
+                    <div class="skill-row">
+                        <div class="skill-category">Languages</div>
+                        <div class="skill-tags">Python <span class="middot">·</span> JavaScript <span
+                                class="middot">·</span> Java <span class="middot">·</span> HTML5 <span
+                                class="middot">·</span> CSS3</div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Web Development</h3>
-                        <div class="skill-chips">
-                            <span class="skill-chip">React</span>
-                            <span class="skill-chip">REST APIs</span>
-                            <span class="skill-chip">DOM Manipulation</span>
-                            <span class="skill-chip">Responsive Design</span>
-                        </div>
+                    <div class="skill-row">
+                        <div class="skill-category">ML / Data</div>
+                        <div class="skill-tags">scikit-learn <span class="middot">·</span> Pandas <span
+                                class="middot">·</span> NumPy <span class="middot">·</span> Jupyter</div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Data & AI</h3>
-                        <div class="skill-chips">
-                            <span class="skill-chip">Machine Learning</span>
-                            <span class="skill-chip">scikit-learn</span>
-                            <span class="skill-chip">Pandas</span>
-                            <span class="skill-chip">NumPy</span>
-                        </div>
+                    <div class="skill-row">
+                        <div class="skill-category">Web Dev</div>
+                        <div class="skill-tags">React <span class="middot">·</span> REST APIs <span
+                                class="middot">·</span> DOM <span class="middot">·</span> Responsive Design</div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Tools & Frameworks</h3>
-                        <div class="skill-chips">
-                            <span class="skill-chip">Google Gemini API</span>
-                            <span class="skill-chip">Streamlit</span>
-                            <span class="skill-chip">WeatherAPI</span>
-                            <span class="skill-chip">Jupyter Notebook</span>
-                        </div>
+                    <div class="skill-row">
+                        <div class="skill-category">APIs & Tools</div>
+                        <div class="skill-tags">Google Gemini <span class="middot">·</span> WeatherAPI <span
+                                class="middot">·</span> Streamlit <span class="middot">·</span> Git</div>
                     </div>
+                </div>
+            </div>
+
+            <div class="marquee-wrapper">
+                <div class="marquee">
+                    <span class="marquee-item">Python</span>
+                    <span class="marquee-item">JavaScript</span>
+                    <span class="marquee-item">React</span>
+                    <span class="marquee-item">scikit-learn</span>
+                    <span class="marquee-item">Pandas</span>
+                    <span class="marquee-item">HTML5</span>
+                    <span class="marquee-item">CSS3</span>
+                    <span class="marquee-item">Git</span>
+                    <span class="marquee-item">Streamlit</span>
+                    <!-- Duplicate for infinite loop -->
+                    <span class="marquee-item">Python</span>
+                    <span class="marquee-item">JavaScript</span>
+                    <span class="marquee-item">React</span>
+                    <span class="marquee-item">scikit-learn</span>
+                    <span class="marquee-item">Pandas</span>
+                    <span class="marquee-item">HTML5</span>
+                    <span class="marquee-item">CSS3</span>
+                    <span class="marquee-item">Git</span>
+                    <span class="marquee-item">Streamlit</span>
                 </div>
             </div>
         </section>
 
-        <!-- Internships Section -->
-        <section id="internships" class="internships section-divider reveal">
+        <!-- Internships / Work Section -->
+        <section id="internships" class="work" data-animate>
             <div class="container">
-                <h2 class="section-title">Industry Experience</h2>
-                <div class="internships-grid">
+                <h2 class="section-title">Work Experience</h2>
+
+                <div class="work-timeline">
                     <!-- Internship 1 -->
-                    <div class="internship-card">
-                        <div class="internship-header">
-                            <div class="company-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="lucide lucide-database">
-                                    <ellipse cx="12" cy="5" rx="9" ry="3" />
-                                    <path d="M3 5V19A9 3 0 0 0 21 19V5" />
-                                    <path d="M3 12A9 3 0 0 0 21 12" />
-                                </svg>
-                            </div>
-                            <div class="internship-title-group">
-                                <h3>Data Science Intern</h3>
-                                <p class="company-name">INFOLABZ IT SERVICES PVT. LTD., Ahmedabad</p>
-                            </div>
-                            <span class="internship-duration">June 2024 – August 2024</span>
+                    <div class="work-card">
+                        <div class="work-header">
+                            <h3 class="work-company">INFOLABZ IT SERVICES</h3>
+                            <span class="work-role">Data Science Intern</span>
+                            <span class="work-date">June–August 2024</span>
                         </div>
-                        <div class="internship-body">
-                            <ul class="internship-responsibilities">
-                                <li><strong>Spearheaded</strong> ML model development alongside the core Machine
-                                    Learning team.</li>
-                                <li><strong>Executed</strong> complex data preprocessing and managed large-scale
-                                    datasets.</li>
-                                <li><strong>Architected</strong> and supported end-to-end AI solution workflows.</li>
-                                <li><strong>Mastered</strong> real-world ML pipelines and deployment strategies.</li>
-                            </ul>
-                            <div class="internship-tech">
-                                <span class="tech-tag">Machine Learning</span>
-                                <span class="tech-tag">Data Processing</span>
-                                <span class="tech-tag">AI Workflows</span>
-                            </div>
-                        </div>
+                        <ul class="work-bullets">
+                            <li><strong>Spearheaded</strong> ML model development alongside the core Machine Learning
+                                team.</li>
+                            <li><strong>Executed</strong> complex data preprocessing and managed large-scale datasets.
+                            </li>
+                            <li><strong>Architected</strong> and supported end-to-end AI solution workflows.</li>
+                            <li><strong>Mastered</strong> real-world ML pipelines and deployment strategies.</li>
+                        </ul>
                     </div>
 
                     <!-- Internship 2 -->
-                    <div class="internship-card">
-                        <div class="internship-header">
-                            <div class="company-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="lucide lucide-code-2">
-                                    <polyline points="16 18 22 12 16 6" />
-                                    <polyline points="8 6 2 12 8 18" />
-                                </svg>
-                            </div>
-                            <div class="internship-title-group">
-                                <h3>Python Web Development Intern</h3>
-                                <p class="company-name">Praxware Technologies, Ahmedabad</p>
-                            </div>
-                            <span class="internship-duration">August 2023 (15 Days)</span>
+                    <div class="work-card">
+                        <div class="work-header">
+                            <h3 class="work-company">Praxware Technologies</h3>
+                            <span class="work-role">Python Web Dev Intern</span>
+                            <span class="work-date">August 2023</span>
                         </div>
-                        <div class="internship-body">
-                            <ul class="internship-responsibilities">
-                                <li><strong>Engineered</strong> functional Python-based web applications from scratch.
-                                </li>
-                                <li><strong>Developed</strong> robust backend logic and RESTful integrations for web
-                                    services.</li>
-                                <li><strong>Optimized</strong> project workflows and collaborated on agile development
-                                    sprints.</li>
-                                <li><strong>Analyzed</strong> and implemented scalable web application architecture
-                                    patterns.</li>
-                            </ul>
-                            <div class="internship-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Backend</span>
-                                <span class="tech-tag">Web Architecture</span>
-                            </div>
-                        </div>
+                        <ul class="work-bullets">
+                            <li><strong>Engineered</strong> functional Python-based web applications from scratch over a
+                                15-day intensive sprint.</li>
+                            <li><strong>Developed</strong> robust backend logic and RESTful integrations for web
+                                services using Python.</li>
+                            <li><strong>Optimized</strong> project workflows and collaborated on agile development
+                                sprints.</li>
+                            <li><strong>Analyzed</strong> and implemented scalable web application architecture
+                                patterns.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="projects section-divider reveal">
+        <section id="projects" class="projects" data-animate>
             <div class="container">
                 <h2 class="section-title">Featured Projects</h2>
                 <div class="projects-grid" id="projects-container">
-                    <!-- Projects will be dynamically loaded here by JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="education section-divider reveal">
-            <div class="container">
-                <h2 class="section-title">Education & Certifications</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>B.Tech in Computer Science and Engineering</h3>
-                            <p class="timeline-date">August 2025 – Present</p>
-                            <p>L.J. Institute of Engineering and Technology, Ahmedabad</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Diploma in Computer Engineering</h3>
-                            <p class="timeline-date">2022 – 2025</p>
-                            <p>Ranchhodlal Chhotalal Technical Institute, Ahmedabad<br><strong>CGPA: 8.22</strong></p>
-                        </div>
-                    </div>
+                    <!-- Projects dynamically loaded here -->
                 </div>
             </div>
         </section>
@@ -302,8 +309,8 @@
                 <div class="contact-wrapper">
                     <div class="contact-content-left">
                         <p class="contact-description">
-                            I'm always interested in hearing about new projects and opportunities. Feel free to reach
-                            out via the form or through my social profiles below!
+                            Open to internships, freelance projects, and interesting problems.
+                            If you have something worth building, let's talk.
                         </p>
                         <div class="contact-methods">
                             <a href="mailto:kevaljamnapara@gmail.com" class="contact-link">
@@ -315,7 +322,7 @@
                                 </svg>
                                 <span>Email</span>
                             </a>
-                            <a href="https://github.com/Keval1306" target="_blank" rel="noopener noreferrer"
+                            <a href="https://github.com/kevaljamnapara" target="_blank" rel="noopener noreferrer"
                                 class="contact-link">
                                 <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -326,8 +333,8 @@
                                 </svg>
                                 <span>GitHub</span>
                             </a>
-                            <a href="https://www.linkedin.com/in/keval1344" target="_blank" rel="noopener noreferrer"
-                                class="contact-link">
+                            <a href="https://www.linkedin.com/in/kevaljamnapara" target="_blank"
+                                rel="noopener noreferrer" class="contact-link">
                                 <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round">
@@ -367,8 +374,21 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">keval.dev</span>
+                <p>Building intelligent systems and clean web apps.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="https://github.com/Keval1306" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/keval1344" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
             <p>&copy; 2026 Keval Jamnapara. All rights reserved.</p>
         </div>
     </footer>
