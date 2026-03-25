@@ -447,7 +447,7 @@ window.addEventListener('scroll', () => {
 // TERMINAL TYPEWRITER EFFECT
 // =============================================
 const terminalText = [
-    "Initializing keval.dev...",
+    "Initializing kevaljamnapara.me...",
     "Loading dependencies...",
     "Mounting React components...",
     "Training ML models... [OK]",
